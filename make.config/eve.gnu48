@@ -28,15 +28,15 @@
 # Define subirectories if another structure
 
 # Paths
-GNUDIR := /usr/local/gcc/4.8.1-3_CentOS6/
-GNULIB := $(GNUDIR)/lib64
+GNUDIR := /opt/local/
+GNULIB := $(GNUDIR)/lib
 GNUBIN := $(GNUDIR)/bin
 
 # Compiling
-F90 := $(GNUBIN)/gfortran
+F90 := $(GNUBIN)/gfortran-mp-7
 FC  := $(F90)
 CC  := $(GNUBIN)/gcc
-CPP := /usr/bin/cpp
+CPP := /usr/local/bin/cpp
 # GNU Fortran version >= 4.4
 ifeq ($(release),debug)
     F90FLAGS += -pedantic-errors -Wall -W -O -g -Wno-maybe-uninitialized
@@ -78,11 +78,11 @@ MKL95DIR :=
 ifeq ($(netcdf),netcdf3)
     NCDIR :=
 else
-    ZLIB    := /usr/local/zlib/1.2.8-2_gcc_4.8.1_CentOS6/lib
-    SZLIB   := /usr/local/szip/2.1_gcc_4.8.1_CentOS6/lib
-    HDF5LIB := /usr/local/hdf5/1.8.12-1_gcc_4.8.1_CentOS6/lib
-    NCDIR   := /usr/local/netcdf/4.3.2_gcc_4.8.1_CentOS6
-    NCFDIR  := /usr/local/netcdf-fortran/4.2_gcc_4.8.1_CentOS6
+    ZLIB    := /opt/local/lib
+    SZLIB   := /opt/local/lib
+    HDF5LIB := /opt/local/lib
+    NCDIR   := /opt/local/
+    NCFDIR  := /opt/local/
 endif
 
 # PROJ
