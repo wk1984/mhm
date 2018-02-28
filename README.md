@@ -46,3 +46,15 @@ See also the [users manual][5] for detailed instructions to setup mHM.
 [6]: LICENSE
 [7]: doc/mhm_papers.md
 [8]: doc/DEPENDENCIES.md
+
+## Minor changes:
+
+modify "eve.gnu48"
+
+to compile on my imac.
+
+all netcdf file and szip were installed by using ##MacPorts##.
+
+compile cmd:
+
+##make system=eve compiler=gnu48
